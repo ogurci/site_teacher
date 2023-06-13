@@ -1,0 +1,319 @@
+/* Подключение шрифта Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    border-spacing: 0;
+    background-color:rgba(222, 226, 230, 1) ;
+
+}
+/* Стили для заголовка страницы */
+/* Стили для меню навигации */
+nav {
+  background-color: #212529; /* задаем цвет фона */
+  overflow: hidden;
+  font-family: Inter;
+  display: flex; /* добавляем стиль для флекс-контейнера */
+  justify-content: center; /* выравниваем по центру по горизонтали */
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* добавляем стиль для флекс-контейнера */
+  justify-content: center; /* выравниваем по центру по горизонтали */
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: rgba(222, 226, 230, 1);
+  color: black;
+}
+nav li a.active {
+  background-color: #555; /* задаем цвет фона для активной ссылки */
+  color: white;
+}
+
+
+/* Стили для основного контента страницы */
+.banner-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+
+    align-items: center;
+    flex-direction: column;
+  }
+  .banner-banner {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(222, 226, 230, 1);
+  }
+  .banner-image {
+    top: 141px;
+    left: 1000px;
+    width: 340px;
+    height: 369px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .banner-ellipse1 {
+    top: 45px;
+    left: 0px;
+    width: 448px;
+    height: 373px;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s forwards;
+  }
+
+.logocollege{
+    margin-top: 100px;
+    margin-right: 300px;
+    width: 30%;
+    height: 30%;
+}
+
+.zag{
+margin-top: 100px;
+margin-left: 250px;
+  color: rgba(33, 37, 41, 1);
+    width: auto;
+    font-size: 64px;
+    font-style: Bold;
+    font-family: Inter;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+p{
+  font-family: Inter;
+  color:#808080;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 100;
+}
+.about-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  align-items: center;
+  flex-direction: column;
+}
+.about-about {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  position: relative;
+  flex-shrink: 1;
+  background-color: rgba(248, 249, 250, 1);
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+
+}
+.about-group37 {
+  width: 878px;
+  height: 163.62359619140625px;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+}
+h2.about-text
+{
+  color: rgba(33, 37, 41, 1);
+  width: 189px;
+  height: auto;
+  position: absolute;
+  font-size: 64px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.about-text {
+  color: rgba(33, 37, 41, 1);
+  width: 189px;
+  height: auto;
+  position: absolute;
+  font-size: 64px;
+  font-style: Semi Bold;
+  text-align: center;
+  justify-content: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  animation: fadeInUp 1.5s forwards;
+}
+.about-text05 {
+  top: 0px;
+  left: 270px;
+  width: 608px;
+  height: 163.62359619140625px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+
+}
+.about-text06 {
+  color: rgba(33, 37, 41, 1);
+  width: 608px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  animation: fadeInUp 1.5s forwards;
+}
+.about-text08 {
+  color: rgba(33, 37, 41, 1);
+  height: auto;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.about-text10 {
+  color: rgba(248, 249, 250, 1);
+  height: auto;
+  font-size: 20px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  animation: fadeInUp 1.5s forwards;
+}
+
+.footer-container {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    overflow: auto;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+  }
+  .footer-footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+    background-color: rgba(33, 37, 41, 1);
+  }
+  .footer-text {
+    color: rgba(248, 249, 250, 1);
+    height: auto;
+    font-size: 20px;
+    font-style: Medium;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .zopa
+  {
+    text-align: center;
+    color: rgba(33, 37, 41, 1);
+    font-family: Inter;
+    font-size: 64px;
+  font-style: Semi Bold;
+  }
+  .ssilka
+  {
+    font-size: 20px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+    margin-top: 40px;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px;
+    background: rgba(248, 249, 250, 1);
+    animation: fadeInUp 1.5s forwards;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .li1
+  {
+    margin: 5px;
+    list-style:decimal;
+    color: rgba(33, 37, 41, 1);
+    text-decoration: none;
+  }
+  a:hover
+  {
+    color: rgb(125, 126, 128);
+  }
+.fdsf
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(222, 226, 230, 1);
+    position: relative;
+}

@@ -1,0 +1,79 @@
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #212529;
+    position: fixed;
+    left: -200px;
+    top: 0;
+    font-family: Inter;
+    z-index: 1;
+    transition: left 0.3s ease-in-out;
+  }
+  .sidebar.active {
+    left: 0;
+    border-right: 1px solid #ddd;
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    margin-top: 300px;
+    padding: 0;
+  }
+
+  .sidebar li {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    justify-content: center;
+    text-align: center;
+  }
+  .sidebar li a {
+    color: white;
+    text-decoration: none;
+  }
+  .sidebar ul li:hover
+  {
+    background-color: rgba(222, 226, 230, 1);
+  }
+  .sidebar ul li:hover a {
+  color: black;
+  }
+
+  .content h2
+  {
+    color: rgba(33, 37, 41, 1);
+  font-size: 64px;
+  font-style: Semi Bold;
+  font-family: Inter;
+  font-weight: 700;
+  animation: fadeInUp 1.5s forwards;
+  }
+  .sidebar li.active {
+    background-color: #555;
+    color: white;
+  }
+
+  .content {
+    margin-left: 200px;
+    padding: 20px;
+  }
+
+
+  .toggle-button {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left: 10px;
+    top: 0px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: left 0.3s ease-in-out;
+  }
+  .sidebar.active ~ .toggle-button {
+    left: 210px;
+  }
+  .opis
+  {
+    color: #212529;
+  }

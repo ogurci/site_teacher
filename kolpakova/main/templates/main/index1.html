@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Личная страница учителя</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/stylenew.css' %}">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="{% url 'main' %}">О себе</a></li>
+        <li><a href="#awards">Достижения</a></li>
+        <li><a href="{% url 'predmet1' %}">Предмет1</a></li>
+        <li><a href="{% url 'predmet2' %}">Предмет2</a></li>
+      </ul>
+    </nav>
+
+      <div class="banner-container">
+
+          <div class="banner-banner">
+            <div class="circle"></div>
+            <div class="banner-image" >
+              <img class="banner-galina" src="{% static 'main/img/galina.jfif.jpeg' %}"/>
+          </div>
+          <h2 class="zag">Здравствуйте, </br>меня зовут </br>Галина Олеговна </br>Колпакова
+          <p>Преподаватель колледжа</br>ГАПОУ МО "ПК"ЭНЕРГИЯ"</p>
+
+          <img src="{% static 'main/img/Logo.png' %}">
+          </h2>
+          </div>
+      </div>
+      <div class="about">
+        <h2 class="about-me">О себе</h2>
+        <div class="text">
+            <p class="smalltext">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, repellendus.
+                 Error atque mollitia qui explicabo minima omnis corporis officia? Repellat voluptate molestiae dicta illo,
+                 inventore aliquid culpa ab ullam eveniet!
+            </p>
+        </div>
+      </div>
+      <div class="container-card2">
+        <h2 class="nagr" id="awards">Мои достижения</h2>
+        <link rel="stylesheet" href="{% static 'main/css/nagrada.css' %}">
+      </div>
+    <div class="container-card">
+        <div class="grid1">
+          {% for el in file %}
+          <div class="nagrada-card">
+            <div class="nagrada-info">
+                <ul>
+              <h2>{{ el.title }}</h2>
+              <li class="nagrop" ><a href="{{ el.file }}">Подробнее</a></li>
+                </ul>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="footer-container">
+        <div class="footer-footer">
+          <span class="footer-text"><span>Галина Колпакова</span></span>
+        </div>
+      </div>
+      <script>
+        var links = document.querySelectorAll('nav a[href^="#"]');
+
+        for (var i = 0; i < links.length; i++) {
+          links[i].addEventListener('click', function(event) {
+            event.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({behavior: 'smooth'});
+          });
+        }
+      </script>
+  </body>
+</html>

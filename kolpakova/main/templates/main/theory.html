@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Личная страница учителя</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/style1.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/sidebar.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="{% static 'main/js/sidebar.js' %}"></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="{% url 'main' %}">О себе</a></li>
+        <li><a href="{% url 'main' %}#awards">Достижения</a></li>
+        <li><a href="{% url 'predmet1' %}" class="active">Предмет1</a></li>
+        <li><a href="{% url 'predmet2' %}">Предмет2</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar">
+      <ul>
+        <li><a href="{% url 'predmet1' %}">Информация</a></li>
+        <li class="active"><a href="{% url 'theory1' %}">Теория</a></li>
+        <li><a href="{% url 'practica1' %}">Практика</a></li>
+      </ul>
+    </div>
+    <div class="about-container">
+        <div class="about-about">
+          <div class="about-group37">
+                <h2 class="zopa">Теория</h2>
+            </div>
+
+        </div>
+      </div>
+      <div class="fdsf">
+      <div class="ssilka">
+        <div class="textgrid">
+        <ul>
+          {% for el in file %}
+            <li class="li1"><a href="{{ el.file }}" class="li1">{{ el.title }}</a></li>
+          {% endfor %}
+        </ul>
+        </div>
+        </div>
+      <div class="footer-container">
+        <div class="footer-footer">
+          <span class="footer-text"><span>Галина Колпакова</span></span>
+        </div>
+    </div>
+      </div>
+      <script>
+        document.getElementById("awards").scrollIntoView({ behavior: 'smooth' });
+      </script>
+      <button class="toggle-button">
+        <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+      </button>
+  </body>
+</html>
